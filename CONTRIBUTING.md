@@ -1,4 +1,4 @@
-# 🤝 Contribution rule to Booking Engine Service
+# 🤝 Contributing to Booking Engine Service
 
 Thank you for contributing! Please follow the guidelines below to maintain code quality and consistency.
 
