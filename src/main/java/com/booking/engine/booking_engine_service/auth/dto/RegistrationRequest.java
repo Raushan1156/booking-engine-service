@@ -12,8 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class RegaitrationRequest {
-    private int id;
+public class RegistrationRequest {
+
     @NotBlank(message = "userName can't be empty.")
     private String userName;
 

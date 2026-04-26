@@ -1,6 +1,9 @@
 package com.booking.engine.booking_engine_service.auth.controller;
 
-import com.booking.engine.booking_engine_service.auth.dto.RegaitrationRequest;
+import com.booking.engine.booking_engine_service.auth.dto.RegistrationRequest;
+import com.booking.engine.booking_engine_service.auth.dto.RegistrationResponse;
+import com.booking.engine.booking_engine_service.auth.service.RegistrationService;
+import com.booking.engine.booking_engine_service.auth.service.impl.RegistrationServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,14 +11,20 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/auth")
 public class Register {
 
+    RegistrationServiceImpl registrationServiceImpl;
+    public Register(RegistrationServiceImpl registrationServiceImpl){
+        this.registrationServiceImpl=registrationServiceImpl;
+
+    }
     @GetMapping(path = "/registerApiTest")
     public String apiTest(){
-        return "apiTest method called.";
+        return registrationServiceImpl.apiTest();
     }
 
     @PostMapping(path = "/registration")
-    public RegaitrationRequest login(@RequestBody @Valid RegaitrationRequest regaitrationRequest){
-        return regaitrationRequest;
+    public RegistrationResponse login(@RequestBody @Valid RegistrationRequest registrationRequest){
+        System.out.println(registrationRequest);
+        return registrationServiceImpl.saveNewUser(registrationRequest);
     }
 }
 
