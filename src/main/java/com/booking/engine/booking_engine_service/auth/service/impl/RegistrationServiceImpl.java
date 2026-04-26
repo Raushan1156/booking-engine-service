@@ -2,8 +2,8 @@ package com.booking.engine.booking_engine_service.auth.service.impl;
 
 import com.booking.engine.booking_engine_service.auth.dto.RegistrationRequest;
 import com.booking.engine.booking_engine_service.auth.dto.RegistrationResponse;
-import com.booking.engine.booking_engine_service.auth.entity.RegistrationEntity;
-import com.booking.engine.booking_engine_service.auth.repository.RegistrationRepo;
+import com.booking.engine.booking_engine_service.user.entity.UserEntity;
+import com.booking.engine.booking_engine_service.user.repository.UserRepository;
 import com.booking.engine.booking_engine_service.auth.service.RegistrationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Service;
 public class RegistrationServiceImpl implements RegistrationService {
 
     private final ModelMapper modelMapper;
-    private final RegistrationRepo registrationRepo;
+    private final UserRepository usersRepository;
 
-    public RegistrationServiceImpl(ModelMapper modelMapper, RegistrationRepo registrationRepo) {
+    public RegistrationServiceImpl(ModelMapper modelMapper, UserRepository usersRepository) {
         this.modelMapper = modelMapper;
-        this.registrationRepo = registrationRepo;
+        this.usersRepository = usersRepository;
     }
 
     public String apiTest(){
@@ -26,8 +26,8 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public RegistrationResponse saveNewUser(RegistrationRequest registrationRequest){
-        RegistrationEntity registrationEntity = modelMapper.map(registrationRequest,RegistrationEntity.class);
-        RegistrationEntity savedEntity = registrationRepo.save(registrationEntity);
+        UserEntity usersEntity = modelMapper.map(registrationRequest, UserEntity.class);
+        UserEntity savedEntity = usersRepository.save(usersEntity);
         return modelMapper.map(savedEntity, RegistrationResponse.class);
     }
 }

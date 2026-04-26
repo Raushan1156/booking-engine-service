@@ -1,4 +1,4 @@
-package com.booking.engine.booking_engine_service.auth.entity;
+package com.booking.engine.booking_engine_service.user.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -16,8 +15,8 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "registration_entity")
-public class RegistrationEntity {
+@Table(name = "users_entity")
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
