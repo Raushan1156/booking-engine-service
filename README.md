@@ -8,6 +8,13 @@ The system models core reservation workflows, including property management, sea
 
 ---
 
+## Other md files:
+- [Annotations Guide](docs/annotations.md)
+- [Troubleshooting](docs/troubleshooting.md)
+
+
+---
+
 ## 🚀 Current Features (Phase 1)
 
 * User Registration & Authentication
