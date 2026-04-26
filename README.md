@@ -91,10 +91,21 @@ PENDING → CONFIRMED → CANCELLED
 
 ## 🔗 API Structure
 
-### 👤 User APIs
+### Auth api (Register / Login)
 
-* Register / Login
-* Profile management
+* POST /auth/registration
+* POST /auth/login
+
+### 👤 User APIs (Profile management)
+
+*  GET /users/{id}
+*  GET /users
+*  GET /users?email={email}
+*  GET /users?mobileNumber={phone}
+*  GET /user/all
+*  PUT /users/{id}
+*  PATCH /users/{id}
+*  DELETE /users/{id}
 
 ### 🏠 Property APIs
 
