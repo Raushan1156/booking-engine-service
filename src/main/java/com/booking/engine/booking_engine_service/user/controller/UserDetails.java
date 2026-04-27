@@ -37,4 +37,9 @@ public class UserDetails {
     public List<UserResponseDto> getAllUsers(){
         return userServiceImpl.getAllUsers();
     }
+
+    @DeleteMapping(path = "/{id}")
+    public UserResponseDto deleteUserById(@PathVariable int id){
+        return userServiceImpl.deleteUserById(id);
+    }
 }

@@ -44,4 +44,12 @@ public class UserServiceImpl implements UserService {
                 .toList();
         return userDtoList;
     }
+
+    @Override
+    public UserResponseDto deleteUserById(int id) {
+        UserEntity entity = usersRepository.findById(id).orElseThrow(
+                ()-> new RuntimeException("User not found"));
+        usersRepository.deleteById(id);
+        return modelMapper.map(entity,UserResponseDto.class);
+    }
 }
