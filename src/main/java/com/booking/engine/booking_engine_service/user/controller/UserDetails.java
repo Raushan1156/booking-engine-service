@@ -32,14 +32,4 @@ public class UserDetails {
         throw new RuntimeException("Please provide correct email or mobile number");
     }
 
-
-    @GetMapping(path = "/all")
-    public List<UserResponseDto> getAllUsers(){
-        return userServiceImpl.getAllUsers();
-    }
-
-    @DeleteMapping(path = "/{id}")
-    public UserResponseDto deleteUserById(@PathVariable int id){
-        return userServiceImpl.deleteUserById(id);
-    }
 }
