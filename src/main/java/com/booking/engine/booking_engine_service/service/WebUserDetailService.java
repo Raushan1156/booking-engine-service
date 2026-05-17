@@ -1,15 +1,17 @@
 package com.booking.engine.booking_engine_service.service;
 
 import com.booking.engine.booking_engine_service.entity.UserEntity;
-import com.booking.engine.booking_engine_service.entity.WebUsersDetails;
 import com.booking.engine.booking_engine_service.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class WebUserDetailService implements UserDetailsService {
 
     @Autowired
@@ -19,12 +21,13 @@ public class WebUserDetailService implements UserDetailsService {
     ModelMapper modelMapper;
 
     @Override
-    public WebUsersDetails loadUserByUsername(String username){
+    public UserDetails loadUserByUsername(String email){
         try {
-            System.out.println("Loading user from DB: " + username);
-            return modelMapper.map(userRepository.findByEmail(username), WebUsersDetails.class);
+            System.out.println("Loading user from DB: " + email);
+            UserEntity userEntity = userRepository.findByUserEmail(email);
+            return userEntity;
         }catch (UsernameNotFoundException usernameNotFoundException){
-            throw new UsernameNotFoundException(username + " is not found in the userEntity table."+
+            throw new UsernameNotFoundException(email + " is not found in the userEntity table."+
                     " Please enter the correct username.");
         }
     }

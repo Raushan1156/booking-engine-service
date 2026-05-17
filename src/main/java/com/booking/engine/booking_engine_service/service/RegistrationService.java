@@ -6,5 +6,6 @@ import com.booking.engine.booking_engine_service.dto.RegistrationResponse;
 public interface RegistrationService {
     public RegistrationResponse saveNewUser(RegistrationRequest registrationRequest);
     public String apiTest();
+    public String encodePassword(String password);
 }
 

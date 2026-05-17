@@ -6,6 +6,7 @@ import com.booking.engine.booking_engine_service.entity.UserEntity;
 import com.booking.engine.booking_engine_service.repository.UserRepository;
 import com.booking.engine.booking_engine_service.service.UserService;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +16,7 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository usersRepository;
     private final ModelMapper modelMapper;
+
     public UserServiceImpl(UserRepository usersRepository, ModelMapper modelMapper){
         this.usersRepository=usersRepository;
         this.modelMapper=modelMapper;
@@ -28,7 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto getUserByEmail(String email) {
-        UserEntity userEntity = usersRepository.findByEmail(email);
+        UserEntity userEntity = usersRepository.findByUserEmail(email);
         if (userEntity == null)
                 throw  new ResourceNotFoundException("User is not found with email:"+email);
         return modelMapper.map(userEntity, UserResponseDto.class);
@@ -58,4 +60,5 @@ public class UserServiceImpl implements UserService {
         usersRepository.deleteById(id);
         return modelMapper.map(entity,UserResponseDto.class);
     }
+
 }
