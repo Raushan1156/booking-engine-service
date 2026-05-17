@@ -14,7 +14,7 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        System.out.println("securityFilterChain called.");
+        System.out.println("securityFilterChain is called....");
         httpSecurity.authorizeHttpRequests(auth -> auth
                             .requestMatchers("/auth/registration").permitAll()
                                 .anyRequest().authenticated()
@@ -23,6 +23,7 @@ public class WebSecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .httpBasic(withDefaults())
         ;
+        System.out.println("securityFilterChain is closing and returning the httpSecurity build.....");
         return httpSecurity.build();
     }
 

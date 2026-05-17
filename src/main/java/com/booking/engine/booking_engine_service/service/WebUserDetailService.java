@@ -22,9 +22,14 @@ public class WebUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email){
+        System.out.println("loadUserByUsername is called....");
         try {
             System.out.println("Loading user from DB: " + email);
             UserEntity userEntity = userRepository.findByUserEmail(email);
+            if (userEntity != null)
+                System.out.println(email+" found in db. userEntity is:  "+userEntity.toString());
+            else
+                System.out.println(email+" not found in db. userEntity is:  "+userEntity);
             return userEntity;
         }catch (UsernameNotFoundException usernameNotFoundException){
             throw new UsernameNotFoundException(email + " is not found in the userEntity table."+

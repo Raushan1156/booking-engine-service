@@ -38,6 +38,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public String encodePassword(String password) {
+        System.out.println("passwordEncoder method is called....");
         return passwordEncoder.encode(password);
     }
 }

@@ -11,11 +11,13 @@ public class ConfigClass {
 
     @Bean
     public ModelMapper modelMapper(){
+        System.out.println("model mapper object is created....");
         return new ModelMapper();
     }
 
     @Bean
     PasswordEncoder passwordEncoder(){
+        System.out.println("passwordEncoder object is created....");
         return new BCryptPasswordEncoder();
     }
 }
