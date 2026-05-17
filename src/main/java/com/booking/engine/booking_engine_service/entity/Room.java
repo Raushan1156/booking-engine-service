@@ -17,6 +17,7 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    
+    @Column(name="hotel", length = 20, nullable = false)
+    String hotelName;
 
 }

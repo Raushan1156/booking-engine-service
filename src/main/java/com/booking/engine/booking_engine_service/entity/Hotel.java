@@ -40,6 +40,6 @@ public class Hotel {
 
     boolean active;
 
-    @Embedded
-    HotelContactInfo contactInfo;
+//    @Embedded
+//    HotelContactInfo contactInfo;
 }

@@ -15,6 +15,7 @@ public class Register {
         this.registrationServiceImpl=registrationServiceImpl;
 
     }
+    // testing api to check the app status
     @GetMapping(path = "/registerApiTest")
     public String apiTest(){
         return registrationServiceImpl.apiTest();

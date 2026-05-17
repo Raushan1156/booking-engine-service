@@ -1,6 +1,6 @@
 package com.booking.engine.booking_engine_service.service.impl;
 
-import com.booking.engine.booking_engine_service.common.exception.ResourceNotFoundException;
+import com.booking.engine.booking_engine_service.util.exception.ResourceNotFoundException;
 import com.booking.engine.booking_engine_service.dto.UserResponseDto;
 import com.booking.engine.booking_engine_service.entity.UserEntity;
 import com.booking.engine.booking_engine_service.repository.UserRepository;

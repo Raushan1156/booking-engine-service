@@ -1,4 +1,4 @@
-package com.booking.engine.booking_engine_service.common.exception;
+package com.booking.engine.booking_engine_service.util.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 

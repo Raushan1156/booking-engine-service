@@ -1,4 +1,4 @@
-package com.booking.engine.booking_engine_service.common.config;
+package com.booking.engine.booking_engine_service.util.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
