@@ -1,0 +1,5 @@
+2026-06-07T13:14:08.266+05:30  INFO 20864 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : Starting LoggingTest using Java 21.0.3 with PID 20864 (started by Raushan in C:\Users\Raushan\Desktop\Raushan\Priye\Learning\Coding-shuttle\Projects\booking-engine-service)
+2026-06-07T13:14:08.271+05:30 DEBUG 20864 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07T13:14:08.272+05:30  INFO 20864 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : No active profile set, falling back to 1 default profile: "default"
+2026-06-07T13:14:09.848+05:30  INFO 20864 --- [booking-engine-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07T13:14:09.961+05:30  INFO 20864 --- [booking-engine-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.

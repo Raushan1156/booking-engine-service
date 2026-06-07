@@ -21,3 +21,17 @@ spring:
     sql:
       init:
         mode: always
+
+logging:
+  level:
+    root: INFO
+    com.booking.engine.booking_engine_service.LoggingTest: TRACE
+  file:
+    name: logs/app.log
+  logback:
+    rollingpolicy:
+      file-name=pattern: logs/archive/booking-engine-%d{yyyy-MM-dd}-%i.log
+      max-file-size: 1KB
+      max-history: 1
+      total-size-cap: 10KB
+
