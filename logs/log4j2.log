@@ -1,0 +1,11 @@
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:44:15 -> Exiting the volume tracking scope...
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:19 -> Starting LoggingTest using Java 21.0.3 with PID 25240 (started by Raushan in C:\Users\Raushan\Desktop\Raushan\Priye\Learning\Coding-shuttle\Projects\booking-engine-service)
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:19 -> Running with Spring Boot v3.5.14, Spring v6.2.18
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:19 -> No active profile set, falling back to 1 default profile: "default"
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:29 -> Started LoggingTest in 11.133 seconds (process running for 13.849)
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:30 -> [Token:1248284] - Entering into a Mock Transaction Flow.
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:30 -> Current data: 90000.0, 100000.0
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:30 -> Transaction limit is about to exhaust. Left volume is:10000.0
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:30 -> Initial volume was: 100000.0,Left volume is: 10000.0
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:30 -> Limit / volume has been updated.
+🌟 [SPECIAL CLASS LOG] 2026-06-07 14:47:30 -> Exiting the volume tracking scope...

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <!-- 🎯 FIX THE DESTINATION FOLDER VALUE TO "logs" -->
+        <Property name="LOG_DIR">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- ==================== CONSOLE APPENDERS ==================== -->
+        <!-- 1. Standard configuration pattern for the general app console -->
+        <Console name="DEFAULT_CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- 2. SPECIAL pattern for your specific test class -->
+        <Console name="SPECIAL_CLASS_CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="🌟 [SPECIAL CLASS LOG] %d{yyyy-MM-dd HH:mm:ss} -> %msg%n"/>
+        </Console>
+
+        <!-- ==================== FILE APPENDERS ==================== -->
+        <!-- 3. General Application File (Standard Pattern) -->
+        <RollingFile name="DEFAULT_FILE"
+                     fileName="${LOG_DIR}/app.log"
+                     filePattern="${LOG_DIR}/archive/log4j2-log-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1">
+                <Delete basePath="${LOG_DIR}/archive" maxDepth="1">
+                    <IfAccumulatedFileSize exceeds="100 KB" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <!-- 4. Special Test Class File (Special Pattern) -->
+        <RollingFile name="SPECIAL_CLASS_FILE"
+                     fileName="${LOG_DIR}/log4j2.log"
+                     filePattern="${LOG_DIR}/archive/log4j2-log-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="🌟 [SPECIAL CLASS LOG] %d{yyyy-MM-dd HH:mm:ss} -> %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1">
+                <Delete basePath="${LOG_DIR}/archive" maxDepth="1">
+                    <IfAccumulatedFileSize exceeds="100 KB" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 5. Attach the special appenders ONLY to your targeted class -->
+        <Logger name="com.booking.engine.booking_engine_service.LoggingTest" level="TRACE" additivity="false">
+            <AppenderRef ref="SPECIAL_CLASS_CONSOLE" />
+            <AppenderRef ref="SPECIAL_CLASS_FILE" />
+        </Logger>
+
+        <!-- 6. Rest of the application uses the default appenders -->
+        <Root level="INFO">
+            <AppenderRef ref="DEFAULT_CONSOLE" />
+            <AppenderRef ref="DEFAULT_FILE" />
+        </Root>
+    </Loggers>
+</Configuration>

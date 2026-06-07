@@ -1,6 +1,6 @@
 package com.booking.engine.booking_engine_service;
 
-//import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -10,9 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.UUID;
 
 @SpringBootTest
-//@Slf4j
+@Slf4j
 public class LoggingTest {
-    public static final Logger log = LoggerFactory.getLogger(LoggingTest.class);
+//    public static final Logger log = LoggerFactory.getLogger(LoggingTest.class);
 
     @Test
     @DisplayName("Addition Test")
