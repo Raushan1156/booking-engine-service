@@ -1,0 +1,5 @@
+2026-06-07T13:45:43.948+05:30  INFO 23232 --- [booking-engine-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07T13:45:44.689+05:30  WARN 23232 --- [booking-engine-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-07T13:45:45.328+05:30  INFO 23232 --- [booking-engine-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name webUserDetailService
+2026-06-07T13:45:47.720+05:30  INFO 23232 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : Started LoggingTest in 10.82 seconds (process running for 13.04)
+2026-06-07T13:45:51.104+05:30 TRACE 23232 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : [Token:5d32a80] - Entering into a Mock Transaction Flow.

@@ -1,0 +1,6 @@
+2026-06-07T13:39:15.285+05:30  INFO 19068 --- [booking-engine-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-07T13:39:15.432+05:30  INFO 19068 --- [booking-engine-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-07T13:39:15.534+05:30  INFO 19068 --- [booking-engine-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-07T13:39:16.131+05:30  INFO 19068 --- [booking-engine-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-07T13:39:16.199+05:30  INFO 19068 --- [booking-engine-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-07T13:39:16.661+05:30  INFO 19068 --- [booking-engine-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51a719e7

@@ -1,7 +1,0 @@
-2026-06-07T13:13:04.834+05:30  WARN 15424 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : This is WARN level.
-2026-06-07T13:13:04.836+05:30 ERROR 15424 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : This is ERROR level.
-2026-06-07T13:13:04.836+05:30 DEBUG 15424 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : This is DEBUG level.
-2026-06-07T13:13:04.837+05:30 TRACE 15424 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : This is TRACE level.
-2026-06-07T13:13:04.878+05:30  INFO 15424 --- [booking-engine-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-07T13:13:04.893+05:30  INFO 15424 --- [booking-engine-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-07T13:13:04.900+05:30  INFO 15424 --- [booking-engine-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

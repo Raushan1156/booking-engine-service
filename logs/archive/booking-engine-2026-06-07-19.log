@@ -1,0 +1,6 @@
+2026-06-07T13:39:21.635+05:30 DEBUG 19068 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : Current data: 90000.0, 100000.0
+2026-06-07T13:39:21.637+05:30  WARN 19068 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : Transaction limit is about to exceed. Left volume is:10000.0
+2026-06-07T13:39:21.637+05:30 DEBUG 19068 --- [booking-engine-service] [main] c.b.e.b.LoggingTest                      : Initial volume was: 100000.0,Left volume is: 10000.0
+2026-06-07T13:39:21.693+05:30  INFO 19068 --- [booking-engine-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07T13:39:21.697+05:30  INFO 19068 --- [booking-engine-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-07T13:39:21.729+05:30  INFO 19068 --- [booking-engine-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

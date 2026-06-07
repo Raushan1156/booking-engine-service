@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 1. Define standard pattern for the whole app console -->
+    <appender name="DEFAULT_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 2. Define a SPECIAL pattern for your specific test class -->
+    <appender name="SPECIAL_CLASS_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>🌟 [SPECIAL CLASS LOG] %d{yyyy-MM-dd HH:mm:ss} -> %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 3. Attach the special appender ONLY to your class -->
+    <logger name="com.booking.engine.booking_engine_service.LoggingTest" level="TRACE" additivity="false">
+        <appender-ref ref="SPECIAL_CLASS_CONSOLE" />
+    </logger>
+
+    <!-- 4. Rest of the application uses the default pattern -->
+    <root level="INFO">
+        <appender-ref ref="DEFAULT_CONSOLE" />
+    </root>
+</configuration>
