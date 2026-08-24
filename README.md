@@ -159,7 +159,5 @@ JWT_SECRET=
 * Prevent double booking using DB-level locking
 * Introduce idempotency for safe retries
 * Ensure booking-payment consistency
-* Add Redis caching for performance
-* Integrate Kafka for async processing
 * Introduce distributed rate limiting
 * Evaluate microservices decomposition at scale
