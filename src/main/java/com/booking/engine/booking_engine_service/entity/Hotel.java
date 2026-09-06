@@ -1,7 +1,6 @@
 package com.booking.engine.booking_engine_service.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Description;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-@Table(name = "hotel")
+@Table(name = "hotels")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Hotel {
 
@@ -40,6 +39,11 @@ public class Hotel {
 
     boolean active;
 
-//    @Embedded
-//    HotelContactInfo contactInfo;
+    // This will help to add vars of contactInfo into hotels table like contact_info_address etcf
+    @Embedded
+    HotelContactInfo contactInfo;
+
+    @OneToMany(mappedBy = "hotel",
+    cascade = CascadeType.REMOVE)
+    private Room room;
 }

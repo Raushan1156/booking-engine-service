@@ -14,17 +14,21 @@ import java.time.LocalDateTime;
 @Setter
 @Table(name = "hotel_contact_info")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Embeddable
 public class HotelContactInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(nullable = false)
     String completeAddress;
     String location;
 
     @Email
     String email;
+
+    @Column(length = 10)
     String phoneNumber;
 
 

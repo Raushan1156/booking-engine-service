@@ -17,7 +17,18 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(name="hotel", length = 20, nullable = false)
-    String hotelName;
+    @Column(name="room_type",
+            nullable = false
+    )
+    String roomType;
+
+    Long cost;
+
+    @ManyToOne
+    @JoinColumn(name="hotel_id",
+            nullable = false,
+            unique = false
+    )
+    private Hotel hotel;
 
 }
